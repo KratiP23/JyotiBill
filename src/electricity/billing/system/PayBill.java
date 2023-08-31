@@ -12,7 +12,7 @@ public class PayBill extends JFrame{
         setBounds(300,150,900,600);
         
         JLabel heading=new JLabel("Electricity Bill");
-        
+        setVisible(true);
     }
     
     public static void main(String[] args) {
