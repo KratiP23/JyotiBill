@@ -82,6 +82,7 @@ public class ProjectMain extends JFrame implements ActionListener{
         JMenuItem paybill=new JMenuItem("Pay bill");
         paybill.setFont(new Font("calibri",Font.PLAIN,12));
         paybill.setBackground(Color.white);
+        paybill.addActionListener(this);
         user.add(paybill);        
         paybill.setMnemonic('P');
         
@@ -101,7 +102,8 @@ public class ProjectMain extends JFrame implements ActionListener{
         JMenuItem generatebill=new JMenuItem("Generate bill");
         generatebill.setFont(new Font("calibri",Font.PLAIN,12));
         generatebill.setBackground(Color.white);
-        report.add(generatebill);        
+        report.add(generatebill); 
+        generatebill.addActionListener(this);
         generatebill.setMnemonic('R');
         generatebill.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,ActionEvent.CTRL_MASK));
         
@@ -200,6 +202,10 @@ public class ProjectMain extends JFrame implements ActionListener{
         }else if(msg.equals("Exit")){
             setVisible(false);
             new Login();
+        }else if(msg.equals("Pay bill")){
+            new PayBill(meter);
+        }else if(msg.equals("Generate bill")){
+            new GenerateBill(meter);
         }
         
     }

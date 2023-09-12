@@ -13,7 +13,8 @@ import java.sql.*;
 public class Login extends JFrame implements ActionListener{
 
     JButton login,signup,cancel;//globally declared
-    JTextField username,password;
+    JTextField username;
+    JPasswordField password;
     Choice loginin;
     public Login(){
         super("Login Page");//super must be the first statement in the constructor
@@ -23,7 +24,7 @@ public class Login extends JFrame implements ActionListener{
         username=new JTextField();
         username.setBounds(400,20,150,20);
         add(username);
-        password=new JTextField();
+        password=new JPasswordField();
         password.setBounds(400,60,150,20);
         add(password);
         
